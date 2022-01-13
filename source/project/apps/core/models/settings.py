@@ -1,11 +1,8 @@
-from django.db import models
 from django.contrib.sites.models import Site
-
-# Create your models here.
+from django.db import models
 
 
 class Settings(Site):
-
     class Meta:
         verbose_name_plural = 'settings'
         db_table = 'core_settings'
