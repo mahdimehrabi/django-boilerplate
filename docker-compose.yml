@@ -17,6 +17,7 @@ services:
       - redis
   db:
     image: postgres:14.1-alpine
+    command: [ "postgres", "-c", "log_statement=all" ]
     volumes:
       - postgres_data:/var/lib/postgresql/data
     environment:
